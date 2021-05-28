@@ -28,7 +28,7 @@ img = pyqrcode.create(s)
 # Create and save the svg file naming “myqr.svg”
 #img.svg(“myqr.svg”, scale = 8)
 # Create and save the png file naming “myqr.png”
-img.png(‘myqr.png’, scale = 6)
+img.png(‘myqr’, scale = 6)
 st.image(img)
 
 
