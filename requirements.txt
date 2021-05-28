@@ -9,3 +9,4 @@ gsheetsdb
 pillow
 Image
 opencv_python_headless==4.5.1.48
+pyqrcode
