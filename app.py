@@ -4,7 +4,6 @@ from PIL import Image
 import pyqrcode
 from pyqrcode import QRCode
 import cv2
-import png
 import numpy as np
 # Create a connection object.
 conn = connect()
