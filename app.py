@@ -1,5 +1,6 @@
 import streamlit as st
 from gsheetsdb import connect
+from PIL import Image
 # Create a connection object.
 conn = connect()
 # Perform SQL query on the Google Sheet.
