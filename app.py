@@ -15,6 +15,17 @@ rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Name = "{name}"')
 # Print results.
 for row in rows:
   st.write(f"{row.Name} is in group number: {int(row.Group_number)}")
+  # String which represents the QR code
+s = “https://medium.com/p/12743ca0a9d9/edit"
+# output file name
+filename = “qrcode.png”
+# Generate QR code
+img = pyqrcode.create(s)
+st.image(img)
+# Create and save the svg file naming “myqr.svg”
+#img.svg(“myqr.svg”, scale = 8)
+# Create and save the png file naming “myqr.png”
+#img.png(‘myqr.png’, scale = 6)
   
 
 
