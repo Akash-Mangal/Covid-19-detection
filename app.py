@@ -1,6 +1,9 @@
 import streamlit as st
 from gsheetsdb import connect
 from PIL import Image
+import pyqrcode
+from pyqrcode import QRCode
+import cv2
 # Create a connection object.
 conn = connect()
 # Perform SQL query on the Google Sheet.
