@@ -10,8 +10,8 @@ def run_query(query):
   rows = conn.execute(query, headers=1)
   return rows
 sheet_url = st.secrets["public_gsheets_url"]
-name=st.text_input("Name")
-rows = run_query(f'SELECT * FROM "{sheet_url}" where Name = "{name}"')
+name = st.text_input("Name")
+rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Name = "{name}"')
 # Print results.
 for row in rows:
   st.write(f"{row.Name} has a : {int(row.Group_number)}:")
