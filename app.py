@@ -13,5 +13,7 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 # Print results.
 for row in rows:
   st.write(f"{row.Student_Photo} {row.Name} has a : {int(row.Group_number)}:")
+  im = Image.open(row.Student_Photo)
+  st.image(im,use_column_width=True)
 
 
