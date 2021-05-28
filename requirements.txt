@@ -6,3 +6,4 @@ matplotlib
 fastai==1.0.61
 sqlalchemy
 gsheetsdb
+pillow
