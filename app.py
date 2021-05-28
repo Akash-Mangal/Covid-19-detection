@@ -5,6 +5,7 @@ import pyqrcode
 from pyqrcode import QRCode
 import cv2
 import numpy as np
+import png
 # Create a connection object.
 conn = connect()
 # Perform SQL query on the Google Sheet.
