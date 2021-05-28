@@ -18,7 +18,7 @@ for row in rows:
   # String which represents the QR code
 s = '''https://medium.com/p/12743ca0a9d9/edit'''
 # output file name
-filename = “qrcode.png”
+#filename = “qrcode.png”
 # Generate QR code
 img = pyqrcode.create(s)
 st.image(img)
