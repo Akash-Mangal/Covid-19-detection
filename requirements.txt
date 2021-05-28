@@ -7,4 +7,4 @@ fastai==1.0.61
 sqlalchemy
 gsheetsdb
 pillow
-Image
+from PIL import Image
