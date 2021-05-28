@@ -8,4 +8,3 @@ sqlalchemy
 gsheetsdb
 pillow
 Image
-PIL
