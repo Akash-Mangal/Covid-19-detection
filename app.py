@@ -29,6 +29,6 @@ if all_memb:
    st.multiselect(f"{row.Name} is in group number: ")
  
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
-st.multiselect(rows)
+st.multiselect("mark attendance",rows)
 
 
