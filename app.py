@@ -24,7 +24,7 @@ if specific:
 # Print results.
 all_memb= st.button("Show all data")
 if all_memb:
-  all_std = run_query(f'SELECT * FROM "{sheet_url}"')
+  rows = run_query(f'SELECT * FROM "{sheet_url}"')
   for row in rows:
     st.write(f"{all_std.Name} is in group number: {int(all_std.Group_number)}")
  
