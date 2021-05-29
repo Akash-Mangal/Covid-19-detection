@@ -26,7 +26,7 @@ all_memb= st.button("Show all data")
 if all_memb:
   rows = run_query(f'SELECT * FROM "{sheet_url}"')
   for row in rows:
-    st.write(f"{row.Name} is in group number: {int(row.Group_number)}")
+    st.write(f"{row.Name} is in group number: ")
  
 
  
