@@ -16,22 +16,19 @@ def run_query(query):
   rows = conn.execute(query, headers=1)
   return rows
 sheet_url = st.secrets["public_gsheets_url"]
-name = st.text_input("Name")
-rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Name = "{name}"')
-# Print results.
-for row in rows:
+specific= st.button("Specific member")
+if specific:
+  name = st.text_input("Name")
+  rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Name = "{name}"')
   st.write(f"{row.Name} is in group number: {int(row.Group_number)}")
-  # String which represents the QR code
-s = '''https://medium.com/p/12743ca0a9d9/edit'''
-# output file name
-#filename = “qrcode.png”
-# Generate QR code
-img = pyqrcode.create(s)
+# Print results.
+all_memb= st.button("Show all data")
+if all_memb:
+  all_std = run_query(f'SELECT * FROM "{sheet_url}"')
+  for row in rows:
+    st.write(f"{all_std.Name} is in group number: {int(all_std.Group_number)}")
+ 
 
-# Create and save the svg file naming “myqr.svg”
-img.svg(“myqr.svg”, scale = 8)
-# Create and save the png file naming “myqr.png”
-img.png(‘myqr.png’, scale = 6)
-st.image(img)
+ 
 
 
