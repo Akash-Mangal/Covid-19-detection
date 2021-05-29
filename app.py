@@ -19,7 +19,7 @@ sheet_url = st.secrets["public_gsheets_url"]
 specific= st.button("Specific member")
 if specific:
   name = st.text_input("Name")
-  rows = run_query(f'SELECT * FROM "{sheet_url}" WHERE Name = "{name}"')
+  row = run_query(f'SELECT * FROM "{sheet_url}" WHERE Name = "{name}"')
   st.write(f"{row.Name} is in group number: {int(row.Group_number)}")
 # Print results.
 all_memb= st.button("Show all data")
